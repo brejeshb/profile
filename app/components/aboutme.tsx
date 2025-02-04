@@ -11,7 +11,7 @@ const AboutMe = () => {
           {/* Text Content */}
           <div className="flex-1">
             <h1 className="text-6xl font-bold mb-6">
-              Hi, I'm 
+            Hi, I&apos;m
               <span className="block text-8xl mt-2">Brejesh</span>
             </h1>
             <div className="bg-main p-6 border-4 border-border shadow-light max-w-xl">
@@ -19,7 +19,7 @@ const AboutMe = () => {
                 I create amazing digital experiences with a focus on user-centered design
               </p>
               <button className="bg-white px-8 py-3 border-4 border-border font-bold shadow-light hover:-translate-y-1 hover:-translate-x-1 transition-all duration-200">
-                Let's Connect
+              Let&apos;s Connect
               </button>
             </div>
           </div>

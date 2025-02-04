@@ -1,5 +1,5 @@
-import Navbar from "./components/navbar";
-import ThreeScene from "./components/threeScene"
+// import Navbar from "./components/navbar";
+// import ThreeScene from "./components/threeScene"
 import AboutMe from "./components/aboutme";
 
 

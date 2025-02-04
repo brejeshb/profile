@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'
 
 type Props = {
   imageUrl: string;
@@ -22,7 +23,7 @@ export default function ImageCard({ imageUrl, caption, isRounded = false }: Prop
         overflow-hidden
         ${isRounded ? 'rounded-[2rem]' : 'rounded-base'}
       `}>
-        <img 
+        <Image
           className="h-full w-full object-cover"
           src={imageUrl} 
           alt={caption || "image"} 
