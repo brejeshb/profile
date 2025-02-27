@@ -1,0 +1,160 @@
+.projectsContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    /* background-color: #000; */
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    min-height: 100vh;
+  }
+  
+  .projectsHeader {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: black;
+  }
+  
+  .swiperContainer {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 2rem;
+  }
+  
+  .swiper {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .swiperSlide {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    aspect-ratio: 16/9;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+  }
+  
+  .swiperSlide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .navigationButtons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding: 0 1rem;
+  }
+  
+  .navigationButtons button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: black;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navigationButtons button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .contentSection {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 1rem;
+  }
+  
+  .textSwiper {
+    width: 100%;
+  }
+  
+  .projectContent {
+    text-align: center;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .projectTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: black;
+    font-weight: 700;
+  }
+  
+  .projectDescription {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+  }
+  
+  .projectButton {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .projectButton:hover {
+    background-color: #0051a8;
+  }
+  
+  /* Adjust navigation arrows from Swiper */
+  /* :global(.swiper-button-prev),
+  :global(.swiper-button-next) {
+    color: white;
+  } */
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .projectsHeader {
+      font-size: 2rem;
+    }
+    
+    .projectTitle {
+      font-size: 1.5rem;
+    }
+    
+    .projectDescription {
+      font-size: 0.9rem;
+    }
+    
+    .swiperContainer {
+      padding: 0 1rem;
+    }
+  }

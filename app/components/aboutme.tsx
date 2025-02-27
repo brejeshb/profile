@@ -1,8 +1,25 @@
+'use client'
 import React from 'react';
 import ImageCard from './neobrutalism/image-card';
-import { Card, CardContent, CardHeader, CardTitle } from './neobrutalism/card';
+// import { Card, CardContent, CardHeader, CardTitle } from './neobrutalism/card';
+import { useState, useEffect } from 'react';
+
+
 
 const AboutMe = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const words = ['Software Developer', 'Data Analyst', 'Self Proclaimed ---'];
+  const totalWords = words.length;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % totalWords);
+    }, 2000); // Change word every 2 seconds
+
+    return () => clearInterval(interval); // Clear the interval when component unmounts
+  }, []);
+
+
   return (
     <section className="max-w-7xl mx-auto p-8">
       {/* Hero Section */}
@@ -10,10 +27,23 @@ const AboutMe = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           {/* Text Content */}
           <div className="flex-1">
-            <h1 className="text-6xl font-bold mb-6">
+            <h1 className="text-6xl font-bold mb-6 relative">
             Hi, I&apos;m
               <span className="block text-8xl mt-2">Brejesh</span>
+
             </h1>
+             <div className="relative h-12 overflow-hidden mt-2">
+              {words.map((word, index) => (
+                <span
+                  key={index}
+                  className={`absolute left-0 w-full text-4xl transition-opacity duration-500 ${
+                    index === currentIndex ? 'opacity-100' : 'opacity-0'
+                  }`}
+                >
+                  {word}
+                </span>
+              ))}
+            </div>
             <div className="bg-main p-6 border-4 border-border shadow-light max-w-xl">
               <p className="text-xl mb-4">
                 I create amazing digital experiences with a focus on user-centered design
@@ -30,7 +60,8 @@ const AboutMe = () => {
               Available for projects
             </div>
             <ImageCard 
-              imageUrl="/images/profile.png"
+              // imageUrl="/images/profile.png"
+              imageUrl="/images/image1.jpg"
               isRounded={true}
             />
           </div>
@@ -41,8 +72,8 @@ const AboutMe = () => {
         <div className="absolute bottom-0 right-20 w-8 h-8 bg-[#FF90E8] border-4 border-border -rotate-12" />
       </div>
 
-      {/* About Section */}
-      <Card>
+
+      {/* <Card>
         <CardHeader>
           <CardTitle className="text-3xl">What I Do</CardTitle>
         </CardHeader>
@@ -56,7 +87,7 @@ const AboutMe = () => {
             ))}
           </div>
         </CardContent>
-      </Card>
+      </Card> */}
     </section>
   );
 };

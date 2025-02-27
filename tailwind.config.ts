@@ -10,21 +10,35 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Your updated custom colors
-        main: "#a388ee", // Purple color
-        overlay: "rgba(0,0,0,0.8)", // background color overlay for alert dialogs, modals, etc.
-
-        // Light mode
-        bg: "#e3dff2", // Light purple background
-        text: "#000", // Text color
-        border: "#000", // Border color
-
-        // Dark mode
-        darkBg: "#272733", // Dark background
-        darkText: "#eeefe9", // Light text for dark mode
-        darkBorder: "#000", // Dark mode border color
-        secondaryBlack: "#212121", // Darker alternative to pure black
-
+        // New white/beige color palette
+        white: {
+          50: "#f8f8f7",  // Lightest
+          100: "#f2f0ef",
+          200: "#ebe9e6",
+          300: "#e5e2de", // Current bg color
+          400: "#dfdbd6",
+          500: "#d8d4ce",
+          600: "#d2cdc6",
+          700: "#ccc6bf",
+          800: "#c5bfb7",
+          900: "#bfb8af",  // Darkest
+        },
+        
+        // Your main colors updated to use the new palette
+        main: "#c5bfb7", // Changed from purple to a beige tone
+        overlay: "rgba(0,0,0,0.6)", // Slightly lighter overlay for a softer feel
+        
+        // Light mode - using your new white palette
+        bg: "#e5e2de", // Keeping your current off-white
+        text: "#bfb8af", // Using the darkest tone for text
+        border: "#ccc6bf", // Medium-dark tone for borders
+        
+        // Dark mode - using inverted tones from your palette
+        darkBg: "#bfb8af", // Using darkest tone as dark mode background
+        darkText: "#f8f8f7", // Using lightest tone for dark mode text
+        darkBorder: "#c5bfb7", // Dark mode border color
+        secondaryBlack: "#d2cdc6", // Replacing with a medium shade
+        
         // Existing colors (from the original config)
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -73,8 +87,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
-        light: "4px 4px 0px 0px #000", // Your custom boxShadow
-        dark: "4px 4px 0px 0px #000",
+        light: "4px 4px 0px 0px #484747", // Updated with medium-dark tone
+        // dark: "4px 4px 0px 0px #bfb8af", // Updated with darkest tone
       },
       translate: {
         boxShadowX: "4px", // Your custom translate
@@ -86,13 +100,13 @@ export default {
         base: "500", // Your custom fontWeight
         heading: "700",
       },
-	  backgroundImage: {
-		// Adding grid pattern with lighter purple lines for neobrutalism effect
-		'grid-pattern': 'linear-gradient(90deg, #a388ee 1px, transparent 1px), linear-gradient(180deg, #a388ee 1px, transparent 1px)',
-	  },
-	  backgroundSize: {
-		'grid-pattern': '20px 20px', // Grid spacing
-	  },
+      backgroundImage: {
+        // Updating grid pattern with new color
+        'grid-pattern': 'linear-gradient(90deg, #d2cdc6 1px, transparent 1px), linear-gradient(180deg, #d2cdc6 1px, transparent 1px)',
+      },
+      backgroundSize: {
+        'grid-pattern': '20px 20px', // Grid spacing
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

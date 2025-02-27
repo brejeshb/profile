@@ -27,6 +27,8 @@ export default function ImageCard({ imageUrl, caption, isRounded = false }: Prop
           className="h-full w-full object-cover"
           src={imageUrl} 
           alt={caption || "image"} 
+          width={300}
+          height={300}
         />
         {caption && (
           <div className="absolute bottom-0 left-0 right-0 bg-main border-t-4 border-border p-4 font-bold">
