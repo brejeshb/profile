@@ -1,14 +1,13 @@
 'use client'
 import React from 'react';
-import ImageCard from './neobrutalism/image-card';
-// import { Card, CardContent, CardHeader, CardTitle } from './neobrutalism/card';
 import { useState, useEffect } from 'react';
-
-
+import { FaLinkedin, FaGithub, FaEnvelope, 
+  // FaPhone
+} from 'react-icons/fa';
 
 const AboutMe = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const words = ['Software Developer', 'Data Analyst', 'Self Proclaimed ---'];
+  const words = ['Software Developer', 'Data Analyst', 'Amateur Cook'];
   const totalWords = words.length;
 
   useEffect(() => {
@@ -19,6 +18,11 @@ const AboutMe = () => {
     return () => clearInterval(interval); // Clear the interval when component unmounts
   }, []);
 
+  const contactInfo = [
+    { icon: <FaEnvelope className="text-2xl" />, text: 'Email', link: 'mailto:brejeshb.2023@scis.smu.edu.sg' },
+    { icon: <FaGithub className="text-2xl" />, text: 'Github', link: 'https://github.com/brejeshb' },
+    { icon: <FaLinkedin className="text-2xl" />, text: 'LinkedIn', link: 'https://linkedin.com/in/brejesh-bhaskaran' }
+  ];
 
   return (
     <section className="max-w-7xl mx-auto p-8">
@@ -28,17 +32,14 @@ const AboutMe = () => {
           {/* Text Content */}
           <div className="flex-1">
             <h1 className="text-6xl font-bold mb-6 relative">
-            Hi, I&apos;m
               <span className="block text-8xl mt-2">Brejesh</span>
-
             </h1>
-             <div className="relative h-12 overflow-hidden mt-2">
+            <div className="relative h-12 overflow-hidden mt-2">
               {words.map((word, index) => (
                 <span
                   key={index}
-                  className={`absolute left-0 w-full text-4xl transition-opacity duration-500 ${
-                    index === currentIndex ? 'opacity-100' : 'opacity-0'
-                  }`}
+                  className={`absolute left-0 w-full font-medium text-4xl transition-opacity duration-500 ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+                    }`}
                 >
                   {word}
                 </span>
@@ -46,50 +47,44 @@ const AboutMe = () => {
             </div>
             <div className="bg-main p-6 border-4 border-border shadow-light max-w-xl">
               <p className="text-xl mb-4">
-                I create amazing digital experiences with a focus on user-centered design
+                I enjoy building products and deriving actionable insights.
               </p>
               <button className="bg-white px-8 py-3 border-4 border-border font-bold shadow-light hover:-translate-y-1 hover:-translate-x-1 transition-all duration-200">
-              Let&apos;s Connect
+                Let&apos;s Connect
               </button>
+
+              {/* Contact Info */}
+              <div className="mt-8 flex flex-wrap gap-4">
+                {contactInfo.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.link}
+                    className="flex items-center gap-2 bg-white p-3 border-2 border-black hover:bg-gray-50 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transform hover:-translate-y-1 transition-all duration-200"
+                  >
+                    {item.icon}
+                    <span className="text-sm font-medium truncate">{item.text}</span>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Profile Image */}
-          <div className="relative">
-            <div className="absolute -top-6 -right-6 bg-[#FF90E8] p-4 border-4 border-border shadow-light z-10 rotate-6">
-              Available for projects
+          {/* Image and Text Container */}
+          <div className="flex flex-col items-center">
+            <div className="p-6 border-4 border-border shadow-light max-w-xl">
+              {/* Image */}
+              <img src="/images/smubear.png" alt="SMU Bear" className="w-full" />
             </div>
-            <ImageCard 
-              // imageUrl="/images/profile.png"
-              imageUrl="/images/image1.jpg"
-              isRounded={true}
-            />
+
+            {/* Text about sophomore placed below the image */}
+            <div className="mt-4 text-lg font-medium text-center w-full max-w-xl">
+              Information Systems and Business Sophomore @Singapore Management University
+            </div>
           </div>
         </div>
-
-        {/* Decorative Elements */}
-        {/* <div className="absolute top-20 left-0 w-12 h-12 bg-[#93DEFF] border-4 border-border rotate-12" /> */}
-        <div className="absolute bottom-0 right-20 w-8 h-8 bg-[#FF90E8] border-4 border-border -rotate-12" />
       </div>
-
-
-      {/* <Card>
-        <CardHeader>
-          <CardTitle className="text-3xl">What I Do</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {['Education', 'Experience', 'Interests '].map((skill) => (
-              <div key={skill} className="bg-white p-6 border-4 border-border shadow-light hover:-translate-y-1 hover:-translate-x-1 transition-all duration-200">
-                <h3 className="text-xl font-bold mb-3">{skill}</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card> */}
     </section>
   );
 };
 
-export default AboutMe; 
+export default AboutMe;

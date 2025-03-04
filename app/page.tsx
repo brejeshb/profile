@@ -4,33 +4,53 @@ import AboutMe from "./components/aboutme";
 // import Projects from "./components/projects";
 // import ProjectsPage from "./components/projectspage";
 // import ProjectsSwipe from "./components/projectswiper";
-import Cube from "./components/carousel/cube";
-import Education from "./components/education";
+// import Cube from "./components/carousel/cube";
+import Hcube from "./components/carousel/hcube";
+import Vcube from "./components/carousel/vcube";
+// import Education from "./components/education";
 
 
 export default function Home() {
   return (
-    // <div className="pt-20"> {/* Add padding to account for the fixed navbar */}
-    <div className="bg-bg bg-grid-pattern bg-[20px]">
-      {/* <div className="bg-bg"> */}
-      <h1 className="text-4xl font-bold text-center">Welcome to My Portfolio</h1>
-      <p className="text-center mt-4">This is the home page.</p>
-      <AboutMe/>
-      {/* <Projects/> */}
+      <div className="bg-bg bg-dot-pattern">
+    {/* <div className="bg-bg bg-grid-pattern bg-[20px] z -10"> */}
+      {/* <Navbar/> */}
+      <div className="pt-20">
+        {/* <div className="bg-bg bg-grid-pattern bg-[20px]"> */}
+        <div className='relative bg-bg bg-dot-pattern'>
+          <p className="flex justify-center">This page is still under construction (づ_ど)</p>
+          <p className="flex justify-center">Cube motion is still a little wonky and coursework is not populated</p>
+          {/* <div className="bg-bg"> */}
 
-      {/* <ProjectsPage/> */}
+          <AboutMe />
+          {/* <Projects/>
 
-      <Cube/>
-      <Education/>
+      <ProjectsPage/> */}
 
+          {/* <Cube/> */}
+          {/* <Education/> */}
 
+          <div className="container mx-auto py-6 px-4">
+            <div className="flex flex-col gap-16">
+              
+              <div className="mb-16">
+                <Hcube />
+              </div>
+
+              <div>
+                <Vcube />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
   );
 }
 
 
-      {/* <div 
+{/* <div 
         id="three-container" 
         style={{ width: '800px', height: '600px' }} // Fixed the style object syntax
       >

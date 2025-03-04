@@ -88,7 +88,7 @@ export default {
       },
       boxShadow: {
         light: "4px 4px 0px 0px #484747", // Updated with medium-dark tone
-        // dark: "4px 4px 0px 0px #bfb8af", // Updated with darkest tone
+        dark: "4px 4px 0px 0px #222222", // Updated with darkest tone
       },
       translate: {
         boxShadowX: "4px", // Your custom translate
@@ -101,11 +101,16 @@ export default {
         heading: "700",
       },
       backgroundImage: {
-        // Updating grid pattern with new color
-        'grid-pattern': 'linear-gradient(90deg, #d2cdc6 1px, transparent 1px), linear-gradient(180deg, #d2cdc6 1px, transparent 1px)',
+        // **Dotted Grid Pattern**
+        "dot-pattern": "radial-gradient(circle, #bfb8af 1px, transparent 1px)",
+
+        // **Existing Grid Pattern**
+        "grid-pattern":
+          "linear-gradient(90deg, #d2cdc6 1px, transparent 1px), linear-gradient(180deg, #d2cdc6 1px, transparent 1px)",
       },
       backgroundSize: {
-        'grid-pattern': '20px 20px', // Grid spacing
+        "dot-pattern": "20px 20px", // Adjust spacing between dots
+        "grid-pattern": "20px 20px",
       },
     },
   },
