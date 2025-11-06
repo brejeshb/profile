@@ -1,0 +1,90 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  perspective: 800px;
+  height: 100vh;
+  background: #111;
+  color: #fff;
+}
+
+:root {
+  --cube-size: 300px;
+  --cube-font: 50px;
+  --cube-border: 1px;
+  --cube-face-padding: calc(
+    (var(--cube-size) - 2 * var(--cube-border) - var(--cube-font)) / 2
+  );
+}
+
+.controls button {
+  margin: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.controls button:hover {
+  background: #555;
+}
+
+.cube {
+  position: relative;
+  transform-style: preserve-3d;
+  animation-name: none;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+.face {
+  width: var(--cube-size);
+  height: var(--cube-size);
+  position: absolute;
+  border: var(--cube-border) solid black;
+  font-size: var(--cube-font);
+  line-height: 1;
+  text-transform: uppercase;
+  padding-top: var(--cube-face-padding);
+  padding-bottom: var(--cube-face-padding);
+  text-align: center;
+  opacity: .6;
+}
+
+
+
+.faceFront {
+  transform: translateX(-150px) translateY(-150px) translateZ(150px);
+  background: goldenrod;
+}
+
+.faceBack {
+  transform: translateX(-150px) translateY(-150px) translateZ(-150px) rotateY(180deg);
+  background: sandybrown;
+}
+
+.faceTop {
+    transform: translateX(-150px) translateY(-300px) rotateX(90deg);
+    background: mediumturquoise;
+}
+
+.faceBottom {
+    transform: translateX(-150px) rotateX(-90deg);
+    background: seagreen;
+  }
+
+  .faceRight {
+    transform: translateY(-150px) rotateY(90deg);
+    background: khaki;
+  }
+
+  .faceeft {
+    transform: translateY(-150px) translateX(-300px) rotateY(-90deg);
+    background: lightcoral;
+  }

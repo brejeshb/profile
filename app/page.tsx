@@ -1,6 +1,8 @@
 // import Navbar from "./components/navbar";
 // import ThreeScene from "./components/threeScene"
 import AboutMe from "./components/aboutme";
+import Demo from "./components/carousel/cube";
+import Ecube from "./components/carousel/Ecube";
 // import Projects from "./components/projects";
 // import ProjectsPage from "./components/projectspage";
 // import ProjectsSwipe from "./components/projectswiper";
@@ -8,6 +10,7 @@ import AboutMe from "./components/aboutme";
 import Hcube from "./components/carousel/hcube";
 import Vcube from "./components/carousel/vcube";
 // import Education from "./components/education";
+
 
 
 export default function Home() {
@@ -39,6 +42,12 @@ export default function Home() {
 
               <div>
                 <Vcube />
+              </div>
+
+              <div>
+                Experitmental cube
+                {/* <Ecube/> */}
+                {/* <Demo/> */}
               </div>
             </div>
           </div>
