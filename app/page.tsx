@@ -46,7 +46,7 @@ export default function Home() {
 
               <div>
                 Experitmental cube
-                {/* <Ecube/> */}
+                <Ecube/>
                 {/* <Demo/> */}
               </div>
             </div>
