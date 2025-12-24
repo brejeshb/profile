@@ -45,11 +45,11 @@
   background: #444;
 }
 
-/* CUBE LOGIC */
-:root {
+
+/* :root {
   --cube-size: 200px;
   --cube-font: 80px;
-}
+} */
 
 .cube {
   position: relative;
