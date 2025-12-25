@@ -10,6 +10,7 @@ import Ecube from "./components/carousel/Ecube";
 
 
 
+
 export default function Home() {
   return (
       <div className="bg-bg bg-dot-pattern">
