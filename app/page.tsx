@@ -1,14 +1,11 @@
 // import Navbar from "./components/navbar";
 // import ThreeScene from "./components/threeScene"
 import AboutMe from "./components/aboutme";
-import Demo from "./components/carousel/cube";
 import Ecube from "./components/carousel/Ecube";
 // import Projects from "./components/projects";
 // import ProjectsPage from "./components/projectspage";
 // import ProjectsSwipe from "./components/projectswiper";
 // import Cube from "./components/carousel/cube";
-import Hcube from "./components/carousel/hcube";
-import Vcube from "./components/carousel/vcube";
 // import Education from "./components/education";
 
 
@@ -36,18 +33,12 @@ export default function Home() {
           <div className="container mx-auto py-6 px-4">
             <div className="flex flex-col gap-16">
               
-              <div className="mb-16">
-                <Hcube />
-              </div>
 
-              <div>
-                <Vcube />
-              </div>
+
 
               <div>
                 Experitmental cube
                 <Ecube/>
-                {/* <Demo/> */}
               </div>
             </div>
           </div>
