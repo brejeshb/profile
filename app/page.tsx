@@ -1,7 +1,7 @@
 // import Navbar from "./components/navbar";
 // import ThreeScene from "./components/threeScene"
 import AboutMe from "./components/aboutme";
-import Ecube from "./components/carousel/Ecube";
+// import Ecube from "./components/carousel/Ecube";
 import Projects from "./components/projects";
 // import ProjectsPage from "./components/projectspage";
 // import ProjectsSwipe from "./components/projectswiper";
