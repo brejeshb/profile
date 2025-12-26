@@ -2,7 +2,7 @@
 // import ThreeScene from "./components/threeScene"
 import AboutMe from "./components/aboutme";
 import Ecube from "./components/carousel/Ecube";
-// import Projects from "./components/projects";
+import Projects from "./components/projects";
 // import ProjectsPage from "./components/projectspage";
 // import ProjectsSwipe from "./components/projectswiper";
 // import Cube from "./components/carousel/cube";
@@ -24,9 +24,7 @@ export default function Home() {
           {/* <div className="bg-bg"> */}
 
           <AboutMe />
-          {/* <Projects/>
-
-      <ProjectsPage/> */}
+          <Projects/>
 
           {/* <Cube/> */}
           {/* <Education/> */}
@@ -39,7 +37,6 @@ export default function Home() {
 
               <div>
                 Experitmental cube
-                <Ecube/>
               </div>
             </div>
           </div>
