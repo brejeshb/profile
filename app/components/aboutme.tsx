@@ -2,8 +2,11 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope, 
+
   // FaPhone
 } from 'react-icons/fa';
+// import BearScene from './BearScene';
+import Image from 'next/image'; 
 
 const AboutMe = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -69,21 +72,51 @@ const AboutMe = () => {
             </div>
           </div>
 
-          {/* Image and Text Container */}
-          <div className="flex flex-col items-center">
-            <div className="p-6 border-4 border-border shadow-light max-w-xl">
-              {/* Image */}
-              <img src="/images/smubear.png" alt="SMU Bear" className="w-full" />
-            </div>
+          
+          <div className="flex flex-col items-center w-[40%]">
+            {/* <div className=" border-4 border-border shadow-light w-[60%]">
+              <div className='h-[50vh] w-[50vh]'>
+                <BearScene />
+              </div> */}
 
-            {/* Text about sophomore placed below the image */}
-            <div className="mt-4 text-lg font-medium text-center w-full max-w-xl">
-              Information Systems and Business Sophomore @Singapore Management University
+            <div className="border-4 border-black rounded-xl overflow-hidden" style={{ boxShadow: '8px 8px 0px 0px #000' }}>
+              {/* Mac-style title bar — gallery flavour */}
+              <div className="bg-[#e8e8e8] border-b-4 border-black px-4 py-3 flex items-center gap-4">
+                {/* Traffic lights */}
+                <div className="flex items-center gap-2">
+                  <div className="w-3.5 h-3.5 rounded-full bg-[#ff5f57] border-2 border-black" />
+                  <div className="w-3.5 h-3.5 rounded-full bg-[#febc2e] border-2 border-black" />
+                  <div className="w-3.5 h-3.5 rounded-full bg-[#28c840] border-2 border-black" />
+                </div>
+                {/* Filename-style title */}
+                <div className="flex-1 text-sm font-mono font-semibold text-gray-600 text-center pr-10">
+                  brejesh_profile.jpg
+                </div>
+              </div>
+
+              {/* Image content */}
+              <Image
+                src="/images/profilepage.jpeg"
+                className="w-full h-auto object-contain block"
+                alt="Profile"
+              />
+
+              {/* Caption bar at the bottom */}
+              <div className="bg-[#e8e8e8] border-t-4 border-black px-4 py-3 text-sm font-mono text-gray-600 text-center">
+                Information Systems &amp; Business Penultimate · Singapore Management University
+              </div>
             </div>
           </div>
+
+
+          </div>
         </div>
-      </div>
+      {/* </div> */}
+
+      
     </section>
+
+    
   );
 };
 

@@ -1,12 +1,13 @@
+import Image from 'next/image'
 import React from 'react'
 
 const sawl = () => {
   return (
     <div>
-        <img src="/images/1.png">
-        </img>
-        <img src="/images/2.png">
-        </img>
+        <Image src="/images/1.png" alt="There is no alt"
+        />
+        <Image src="/images/2.png" alt="There is no alt"
+        />
     </div>
   )
 }

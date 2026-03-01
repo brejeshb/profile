@@ -1,14 +1,14 @@
 // import Navbar from "./components/navbar";
 // import ThreeScene from "./components/threeScene"
 import AboutMe from "./components/aboutme";
+import Coursework from "./components/coursework";
 // import Ecube from "./components/carousel/Ecube";
 import Projects from "./components/projects";
 // import ProjectsPage from "./components/projectspage";
 // import ProjectsSwipe from "./components/projectswiper";
 // import Cube from "./components/carousel/cube";
 // import Education from "./components/education";
-
-
+// import BearScene from "./components/BearScene";
 
 
 export default function Home() {
@@ -20,12 +20,11 @@ export default function Home() {
         {/* <div className="bg-bg bg-grid-pattern bg-[20px]"> */}
         <div className='relative bg-bg bg-dot-pattern'>
           <p className="flex justify-center">This page is still under construction (づ_ど)</p>
-          <p className="flex justify-center">Cube motion is still a little wonky and coursework is not populated</p>
+          <p className="flex justify-center">Cube motion is still a little wonky</p>
           {/* <div className="bg-bg"> */}
 
           <AboutMe />
           <Projects/>
-
           {/* <Cube/> */}
           {/* <Education/> */}
 
@@ -36,21 +35,22 @@ export default function Home() {
 
 
               <div>
-                Experitmental cube
+                <Coursework/>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div 
+        id="three-container" 
+        style={{ width: '800px', height: '600px' }} // Fixed the style object syntax
+      >
+        {/* <ThreeScene /> */}
+        {/* <BearScene/> */}
+      </div> 
     </div>
-
+    
   );
 }
 
 
-{/* <div 
-        id="three-container" 
-        style={{ width: '800px', height: '600px' }} // Fixed the style object syntax
-      >
-        <ThreeScene />
-      </div> */}

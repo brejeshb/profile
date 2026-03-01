@@ -47,7 +47,8 @@ const ThreeScene = () => {
 
     let model; // Store reference to the model
     const gltfLoader = new GLTFLoader();
-    gltfLoader.load('/3d/wall_e/scene.gltf', (gltf) => {
+    // gltfLoader.load('/3d/wall_e/scene.gltf', (gltf) => {
+    gltfLoader.load('/3d/bear/bear.glb', (gltf) => {
       model = gltf.scene;
       
       // Center and scale the model

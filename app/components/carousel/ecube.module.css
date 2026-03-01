@@ -3,16 +3,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* gap: 2rem; */
   width: 100%;
   height: 80%;
+  position: relative;
 }
 
 .cubeContainer {
-  perspective: 1000px;
+  perspective: 2000px; /* Increased for better vertical view */
   width: 100%;
   height: 100%;
-  max-width: 60%;
+  max-width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,9 +26,7 @@
   aspect-ratio: 16 / 9;
   transform-style: preserve-3d;
   transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-  
-  /* Fallback if JS hasn't loaded yet */
-  --translateZ: 400px; 
+  --translateZ: 225px; /* Fallback */
 }
 
 .face {
@@ -40,50 +38,62 @@
   justify-content: center;
   backface-visibility: hidden;
   background: #fff;
-  border: 2px solid #000; /* Added border for definition */
+  border: 3px solid #000;
   overflow: hidden;
 }
 
-.face img {
+/* --- HORIZONTAL FACES --- */
+.faceFront { transform: rotateY(0deg) translateZ(var(--translateZ)); }
+.faceRight { transform: rotateY(90deg) translateZ(var(--translateZ)); }
+.faceLeft  { transform: rotateY(-90deg) translateZ(var(--translateZ)); }
+
+/* --- VERTICAL FACES --- */
+.faceTop    { transform: rotateX(90deg) translateZ(var(--translateZ)); }
+.faceBottom { transform: rotateX(-90deg) translateZ(var(--translateZ)); }
+
+/* Standard Back (Horizontal Spin) */
+.faceBack { 
+  transform: rotateY(180deg) translateZ(var(--translateZ)); 
+}
+
+/* Vertical Back (Vertical Spin - Fixes Upside Down Text) */
+.faceBackVertical {
+  transform: rotateX(180deg) translateZ(var(--translateZ));
+}
+
+
+/* --- UI --- */
+.uiContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 60%;
+  margin-top: 2rem;
 }
 
-/* USE THE DYNAMIC VARIABLE HERE */
-.faceFront {
-  transform: rotateY(0deg) translateZ(var(--translateZ));
-}
-
-.faceBack {
-  transform: rotateY(180deg) translateZ(var(--translateZ));
-}
-
-.faceRight {
-  transform: rotateY(90deg) translateZ(var(--translateZ));
-}
-
-.faceLeft {
-  transform: rotateY(-90deg) translateZ(var(--translateZ));
-}
-
-/* Dots Styling - Neobrutalism */
-.dots {
+.controls {
   display: flex;
   gap: 1rem;
-  padding-top: 8%;
-  padding-bottom: 8%;
+}
+
+.dots {
+  display: flex;
+  gap: 0.75rem;
+  padding-top:1.6rem;
+  padding-bottom: 0.8rem;
 }
 
 .dot {
   width: 16px;
   height: 16px;
-  border-radius: 50%; /* Make them circles */
+  border-radius: 50%;
   border: 2px solid #000;
-  background: #fff; /* Explicit opaque white */
+  background: #fff;
   cursor: pointer;
   padding: 0;
-  box-shadow: 2px 2px 0px #000; /* Hard shadow */
+  box-shadow: 2px 2px 0px #000;
   transition: all 0.2s;
 }
 
@@ -91,18 +101,6 @@
   transform: translate(-1px, -1px);
   box-shadow: 3px 3px 0px #000;
 }
-
-.dot:active {
-  transform: translate(2px, 2px);
-  box-shadow: 0px 0px 0px #000;
-}
-
 .dotActive {
   background: #000;
-  box-shadow: 2px 2px 0px #555; /* Subtle difference for active state */
-}
-
-.controls {
-  display: flex;
-  gap: 1rem;
 }

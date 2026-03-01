@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Ecube from './carousel/Ecube';
 import { Button } from './neobrutalism/button';
 import { Github, ExternalLink, FileText, Award } from 'lucide-react';
-
+import Image from 'next/image';
 const projects = [
   {
     image: '/images/SGBuddy.png',
@@ -71,7 +71,7 @@ const Projects: React.FC = () => {
   };
 
   const renderFace = (project: typeof projects[0]) => (
-    <img src={project.image} alt={project.title} />
+    <Image src={project.image} alt={project.title} />
   );
 
   const currentProject = projects[currentIndex];
