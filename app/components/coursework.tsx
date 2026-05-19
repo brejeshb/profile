@@ -60,7 +60,8 @@ const Coursework: React.FC = () => {
     <div className="relative w-full h-full">
       <Image
         src={item.image} 
-        alt={item.title} 
+        alt={item.title}
+        fill={true}
         className="w-full h-full object-cover"
       />
 

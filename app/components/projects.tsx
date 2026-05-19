@@ -71,7 +71,7 @@ const Projects: React.FC = () => {
   };
 
   const renderFace = (project: typeof projects[0]) => (
-    <Image src={project.image} alt={project.title} />
+    <Image src={project.image} alt={project.title} fill={true} />
   );
 
   const currentProject = projects[currentIndex];

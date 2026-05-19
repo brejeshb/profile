@@ -2,6 +2,7 @@
 // import ThreeScene from "./components/threeScene"
 import AboutMe from "./components/aboutme";
 import Coursework from "./components/coursework";
+import Opine from "./components/opine";
 // import Ecube from "./components/carousel/Ecube";
 import Projects from "./components/projects";
 // import ProjectsPage from "./components/projectspage";
@@ -24,6 +25,7 @@ export default function Home() {
           {/* <div className="bg-bg"> */}
 
           <AboutMe />
+          <Opine/>
           <Projects/>
           {/* <Cube/> */}
           {/* <Education/> */}

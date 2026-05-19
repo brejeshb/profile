@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope, 
+import { FaLinkedin, FaGithub, FaEnvelope, FaFile, 
 
   // FaPhone
 } from 'react-icons/fa';
@@ -24,7 +24,8 @@ const AboutMe = () => {
   const contactInfo = [
     { icon: <FaEnvelope className="text-2xl" />, text: 'Email', link: 'mailto:brejeshb.2023@scis.smu.edu.sg' },
     { icon: <FaGithub className="text-2xl" />, text: 'Github', link: 'https://github.com/brejeshb' },
-    { icon: <FaLinkedin className="text-2xl" />, text: 'LinkedIn', link: 'https://linkedin.com/in/brejesh-bhaskaran' }
+    { icon: <FaLinkedin className="text-2xl" />, text: 'LinkedIn', link: 'https://linkedin.com/in/brejesh-bhaskaran' },
+    { icon: <FaFile className="text-2xl" />, text: 'CV', link: '/BrejeshBhaskaran_resume.pdf' }
   ];
 
   return (
@@ -52,7 +53,7 @@ const AboutMe = () => {
               <p className="text-xl mb-4">
                 I enjoy building products and deriving actionable insights.
               </p>
-              <button className="bg-white px-8 py-3 border-4 border-border font-bold shadow-light hover:-translate-y-1 hover:-translate-x-1 transition-all duration-200">
+              <button className="bg-white px-8 py-3 border-4 border-border font-bold shadow-light">
                 Let&apos;s Connect
               </button>
 
@@ -99,6 +100,8 @@ const AboutMe = () => {
                 src="/images/profilepage.jpeg"
                 className="w-full h-auto object-contain block"
                 alt="Profile"
+                width={500}
+                height={500}
               />
 
               {/* Caption bar at the bottom */}
